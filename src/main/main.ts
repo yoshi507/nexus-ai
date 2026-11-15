@@ -109,6 +109,7 @@ function ensureProviderView(provider: Provider): WebContentsView {
     }
   });
   const contents = view.webContents;
+  contents.setUserAgent(app.userAgentFallback.replace(/\sElectron\/[^\s]+/, ''));
 
   contents.setWindowOpenHandler(({ url }) => {
     if (isValidUrl(url)) void shell.openExternal(url);

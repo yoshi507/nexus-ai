@@ -253,6 +253,7 @@ byId<HTMLFormElement>('provider-form').addEventListener('submit', async (event) 
       const added = await window.nexus.addProvider({ name, url });
       providers = [...providers, added];
       await activateProvider(added.id);
+      setSettingsOpen(false);
     }
     drawProviders();
     closeProviderForm();
