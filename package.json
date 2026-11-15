@@ -1,6 +1,6 @@
 {
   "name": "nexus-ai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A desktop AI website hub for accessing multiple AI providers",
   "main": "dist/main/main.js",
   "scripts": {

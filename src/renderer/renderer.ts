@@ -238,7 +238,10 @@ byId('close-settings-form').addEventListener('click', () => {
 byId('settings-modal').addEventListener('click', (event) => {
   if (event.target === byId('settings-modal')) setSettingsOpen(false);
 });
-byId('add-provider-button').addEventListener('click', () => openProviderForm());
+byId('add-provider-button').addEventListener('click', () => {
+  setSettingsOpen(true);
+  openProviderForm();
+});
 byId('provider-form-cancel').addEventListener('click', closeProviderForm);
 byId<HTMLFormElement>('provider-form').addEventListener('submit', async (event) => {
   event.preventDefault();
